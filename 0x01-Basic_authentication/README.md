@@ -1,0 +1,3 @@
+# 0x01-Basic Authentication
+
+Learnt about the different types of auth and the advantages and disadvantages of basic auth. Going to implement a basic auth...
