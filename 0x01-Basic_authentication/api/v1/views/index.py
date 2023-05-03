@@ -27,9 +27,24 @@ def stats() -> str:
 
 
 @app_views.route('/unauthorized', methods=['GET'], strict_slashes=False)
-def new_error() -> str:
+def unauthorized() -> str:
     """
     By calling abort(401), the error
     handler will be executed.
+    GET /api/v1/unauthorized
+    Return:
+      - Aborts
     """
     return abort(401, description="Unauthorised")
+
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def forbidden() -> str:
+    """
+    By calling abort(403), the error
+    handler for 403 will be executed.
+    GET /api/v1/forbidden
+    Return:
+     - Aborts
+    """
+    return abort(403, description="Forbidden")
